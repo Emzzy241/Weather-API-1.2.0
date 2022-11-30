@@ -36,7 +36,7 @@ module.exports = {
       outputReport: false
     }),
     new HtmlWebpackPlugin({
-      title: 'Memory Game',
+      title: 'Get Weather Condition Application',
       template: './src/index.html',
       inject: 'body'
     }),
