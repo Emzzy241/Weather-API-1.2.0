@@ -68,7 +68,7 @@ $(document).ready(() => {
                 // getting the fahrenheit temperature value
                 let myTempValue = 1.8 * (myResponseBody.main.temp - 273) + 32;
                 // let myTempValue = Math.trunc(1.8 * (response.main.temp - 273) + 32); -- I didn't trunc or floor the values because I want my value to be concised for my users
-                console.log(myTempValue);
+                // console.log(myTempValue);
 
                 $('.showHumidity').text(`The humidity in ${city} is ${myResponseBody.main.humidity}%`);
                 $('.showTemp').text(`The temperature in Kelvin is ${myResponseBody.main.temp}k.`);
@@ -106,7 +106,7 @@ $(document).ready(() => {
         function getMyCountryWeatherValues(myCountryBody) {
             if (myCountryBody.main) {
                 let myCountryTempValue = 1.8 * (myCountryBody.main.temp - 273) + 32;
-                console.log(myCountryTempValue);
+                // console.log(myCountryTempValue);
 
                 $('.showHumidityCountry').text(`The humidity in ${country} is ${myCountryBody.main.humidity}%`);
                 $('.showTempCountry').text(`The temperature in Kelvin is ${myCountryBody.main.temp}k.`);
