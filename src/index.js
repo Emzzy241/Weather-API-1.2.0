@@ -19,33 +19,37 @@ import './css/styles.css';
 
 import { WeatherService, CountryWeatherService } from "./weather-service.js";
 
-// importing the  class that we need in the UI logic file
-
+// importing the App Logo Image
+import jsBadgeImage from "./assets/images/js-Badge.svg";
 
 
 // separation of logic code 
 
-// a function for clearing out the form fields and other things from the DOM(Document Object Module)
+// functions for clearing out the form fields and other things from the DOM(Document Object Module)
+// for cities and states
+function clearFields() {
+    $("#location").val("");
+    $(".showErrors").text("");
+    $(".showHumidity").text("");
+    $(".showTemp").text("");
+    $(".showTempCelsius").text("");
+    $(".showTempFahrenheit").text("");
+}
+// for countries
+function clearCountryFields() {
+    $("#country").val("");
+    $(".showErrorsCountry").text("");
+    $(".showHumidityCountry").text("");
+    $(".showTempCountry").text("");
+    $(".showTempCelsiusCountry").text("");
+    $(".showTempFahrenheitCountry").text("");
+}
 
 $(document).ready(() => {
-    
-    function clearFields() {
-        $("#location").val("");
-        $(".showErrors").text("");
-        $(".showHumidity").text("");
-        $(".showTemp").text("");
-        $(".showTempCelsius").text("");
-        $(".showTempFahrenheit").text("");
-    }
-    
-    function clearCountryFields() {
-        $("#country").val("");
-        $(".showErrorsCountry").text("");
-        $(".showHumidityCountry").text("");
-        $(".showTempCountry").text("");
-        $(".showTempCelsiusCountry").text("");
-        $(".showTempFahrenheitCountry").text("");
-    }
+
+    // working with the jsBadge Image when app is ready
+    let myAppLogo = $("#img");
+    myAppLogo.attr("href", jsBadgeImage);
 
 
     
